@@ -30,7 +30,7 @@ int main() {
     }
     printf("\nWrap sum: ");
     for(int i = 0; i < n; ++i) {
-        printf("%d, ", wsum[i]);
+        printf("%d ", wsum[i]);
     }
 
     for(int i = 0; i < n; ++i) {
