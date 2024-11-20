@@ -1,4 +1,4 @@
-N = 4
+N = 8
 
 def printSolution(board):
     for row in board:
@@ -7,7 +7,9 @@ def printSolution(board):
 def isSafe(board, row, col):
     for i in range(col):
         if board[row][i] or any(board[r][c] for r, c in zip(range(row, -1, -1), range(col, -1, -1))) or \
-           any(board[r][c] for r, c in zip(range(row, N), range(col, -1, -1))):
+           any(board[r][c] for r, c in zip(range(row, N), range(col, -1, -1))) or \
+            any(board[r][c] for r, c in zip(range(row, -1, -1), range(row, N))) or \
+                any(board[r][c] for r, c in zip(range(row, N), range(col, N))):
             return False
     return True
 
