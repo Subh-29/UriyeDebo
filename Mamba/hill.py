@@ -20,7 +20,7 @@ class MaximisationProblem:
         return [state - 1, state + 1]
     
     def evaluate(self, state):
-        return -state**3 + state * 4
+        return -state**3 + state * 4    #state = x, -x^3+4x
     
 problem = MaximisationProblem()
 
